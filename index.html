@@ -1,0 +1,113 @@
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow|Cookie&display=swap" rel="stylesheet">
+    
+   
+
+    <style>
+     body {
+      width: 100%;
+      height: 100vh;
+      perspective: 800px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-image: url('bg.jpg');
+      background-size: cover;
+    }
+
+    .card {
+      transform-style: preserve-3d;
+      position: relative;
+      height: 500px;
+      width: 300px;
+      cursor: pointer;
+    }
+
+    h1 {
+      font-family: 'Cookie', serif;
+      font-size: 60px;
+      margin-top: 150px;
+      color: white;
+    }
+
+    h2 {
+      font-family: 'Cookie', serif;
+      font-size: 40px;
+    }
+
+    h3 {
+      font-family: 'Cookie', serif;
+      font-size: 40px;
+    }
+   
+    p {
+      font-family: 'Cookie', serif;
+      font-size: 40px;
+    }
+
+    img{
+      margin-top: 150px;
+      width: 90px;
+      transform: scaleX(-1);
+    }
+
+    .page, .front {
+      background: url('winter_scene.jpg') no-repeat center darkred;
+      background-size: cover;
+    }
+
+    .message {
+      margin-top: 30px;
+      color: #900909;
+    }
+
+    .front, .back, .page {
+      transform-style: preserve-3d;
+      transform-origin: left center;
+      transition: transform .5s ease-in-out, box-shadow .5s ease-in-out;
+      position: absolute;
+      width: 300px;
+      height: 100%;
+      top: 0; 
+      left: 0;
+      background-color: #F7F7F7;
+      padding: 40px;
+    }
+
+    .card:hover .front {
+      transform: rotateY(-160deg);
+      box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+    }
+
+    .card:hover .page {
+      transform: rotateY(-159deg);
+      box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+    }
+
+    .card:hover .back {
+      width: 300px;
+      transform: rotateY(-2deg);
+      box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+    }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="back">
+          <div class="message">
+            <h2>Mīļo mammu,</h2>
+            <p>Paldies par tavu atbalstu.</p>
+            <h3 class="cookie">Ričards</h3>
+          </div>
+      </div>
+      <div class="page">
+          <img src="tree.png">
+      </div>
+      <div class="front">
+          <h1>Priecīgus Ziemassvētkus!</h1>
+      </div>
+    </div>
+  </body>
+</html>
